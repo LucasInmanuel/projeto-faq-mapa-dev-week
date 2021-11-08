@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+html{
+	background-image: linear-gradient(#af67e9,#6565e7);
+	min-height: 100%;
+}
+
+main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.faq{
+	width: 65%;
+	min-height: 450px;
+	box-shadow: 0px 25px 50px rgba(0,0,0,0.3);
+	background-color: white;
+	display: flex;
+	align-items: center;
+	border-radius: 30px;
+}
+
+.faq .ilustracao{
+	position: relative;
+	left: -100px;
+	width: 50%;
+	margin: 50px 0;
+}
+
+.faq .conteudo{
+	width: 40%;
+	padding-bottom: 20px;
+	padding: 10px;
+}
+
+.faq .conteudo h1{
+	font-size: 32px;
+	font-weight: 700;
+	margin: 25px 0;
+}
+
+.faq .conteudo .items{
+	list-style-type: none;
+}
+
+.faq .conteudo .items .item{
+	cursor: pointer;
+	background-image: url('../images/icone-seta-pra-baixo.png');
+	background-repeat: no-repeat;
+	background-position: top 8px right 0;
+	background-size: 12px;
+	border-bottom: 1px solid #ccc;
+	margin: 10px 0;
+}
+
+.faq .conteudo .items .item:last-child{
+	border-bottom: none;
+}
+
+.item .pergunta{
+	padding-bottom: 15px;
+	font-size: 18px;
+	width: 90%;
+	transition: 0.3s;
+}
+
+.item .pergunta:hover{
+	color: #f47c57;
+}
+
+.item .resposta{
+	display: none;
+	padding-bottom: 15px;
+}
+
+
+/*estilos do item ativo*/
+.faq .items .item.ativo h2{
+	font-weight: 700;
+}
+
+.faq .items .item.ativo .resposta{
+	display: block;
+}
+
+.faq .items .item.ativo{
+	background-image: url('../images/icone-seta-pra-cima.png');
+}
+
+@media screen and (max-width: 1140px){
+	.faq{
+		flex-direction: column;
+		width: 90%;
+		justify-content: center;
+	}
+
+	.faq .ilustracao{
+	left: 0;
+	width: 40%;
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+
+	.faq .conteudo{
+		width: 100%;
+	}
+
+	.faq .conteudo h1{
+		font-size: 24px;
+		text-align: center;
+		margin-top: 0;
+	}
+
+	.faq .conteudo .items{
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.faq .items .pergunta{
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 540px){
+	.faq{
+		height: 540px;
+	}
+}
